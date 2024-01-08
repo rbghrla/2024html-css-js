@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: orange;
+        }
+        body{
+            /* margin: 0;  하면 vw랑 body기준 % 크기같음*/
+        }
+    </style>
+</head>
+<body>
+        <!-- px: 고정 크기 -->
+        <div style="width: 700px;"></div>
+
+        <!-- %: 가변 크기, 상위 태그의 기준으로 %만큼의 크기 저장 -->
+        <div style="width: 60%;">
+            <p style="width: 50%; height: 70%; background-color: royalblue;"></p>
+        </div>
+
+        <!-- vw, vh: 가변 크기, viewport를 기준으로 백분율만큼 크기 지정 -->
+        <div style="width: 60vw;">
+            <p style="width: 50vw; height: 70%; background-color: royalblue;"></p>
+        </div>
+
+        <!-- rem -->
+      
+        <!-- em -->
+       
+
+</body>
+</html>

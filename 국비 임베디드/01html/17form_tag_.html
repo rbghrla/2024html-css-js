@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/test.jsp" >
+        <div>
+            <label for="">계정명</label>
+            <input type="text" required>
+        </div>
+        <div>
+            <label for="">패스워드</label>
+            <input type="password"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+            required
+            oninvalid="this.setCustomaValidity('8자 이상 문자-숫자-문자순으로 입력하세요')"
+            >
+        </div>
+        <div>
+            <label for="">이메일</label>
+            <input type="email" required>
+        </div>
+        <div>
+            <label for="">읽기 전용</label>
+            <input type="text" readonly value="00000000" name="id1" >
+        </div>
+        <div>
+            <label for="">선택 x 서버 전달 x</label>
+            <input type="text" disabled value="00000000" name="id2">
+        </div>
+        <div>
+            <label for="">데이터 숨기기</label>
+            <input type="hidden" name="pageNo" value="45" >
+        </div>
+
+        <div>
+            <label for="">연락처</label>
+            <input type="tel" name="pageNo" value="45" 
+            pattern="[0-9]{3,4}" required>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .wrapper label  {
+            display: inline-block; 
+            width: 200px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        .button{
+            width:100px;
+            margin:auto;
+            
+        }
+        input{
+            margin: 3px;
+            
+            
+        }
+        label{
+            font-weight: 800;
+        }
+    </style>
+    <script>
+        function selectControl(){
+            const domain = document.getElementById('domain')
+            const len = domain.value.length;
+            const str = document.getElementById('searchValue').value;
+            for (let i = 0; i < len; i++) {
+                if(domain.options[i].value == str){
+                    domain.options[i].selected = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <label for="">이름</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">주민등록번호</label>
+            <input type="text"> - <input type="text">
+        </div>
+        <div>
+            <label for="">아이디</label>
+            <input type="text"><a href="">korea</a>
+        </div>
+        <div>
+            <label for="" >비밀번호</label> 
+            <input type="text" placeholder="영문/숫자포함 6자 이상">
+        </div>
+        <div>
+            <label for="">비밀번호 확인</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">비밀번호 힌트/답변</label>
+            <select name="pwhint" id="">
+                <option value="choice">선택하세요</option>
+                <option value="location">사는 지역은?</option>
+                <option value="age">나이는?</option>
+                <option value="parents">부모님 이름은?</option>
+                <option value="사는 지역은?">사는 지역은?</option>
+            </select>
+        </div>
+        <div>
+            <label for="">답변</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">이메일</label>
+            <input type="text">@<input type="text" id='searchValue'>
+            <select name="email" id="domain">
+                <option value="fix">직접입력</option>
+                <option value="naver">naver.com</option>
+                <option value="daum">daum.net</option>
+                <option value="google">gmail.com</option>
+            </select>
+            <input type='button' onclick='selectControl()' value='선택'>
+        </div>
+        <div>
+            <label for="">주소</label>
+            <input type="text">-<input type="text"><input type="text">
+            <label for=""></label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="">전화번호</label>
+            <input type="text">-<input type="text">-<input type="text">
+        </div>
+        <div>
+            <label for="">핸드폰 번호</label>
+            <input type="text">-<input type="text">-<input type="text">
+        </div>
+        <div>
+            <label for="">직업</label>
+            <select name="pwhint" id="">
+                <option value="choice">선택하세요</option>
+                <option value="students">학생</option>
+                <option value="company">회사원</option>
+                <option value="ceo">창업자</option>
+                <option value="none">무직</option>
+            </select>
+        </div>
+        <div>
+            <label>메일/sns 정보수신</label>
+            <input type="radio" name="information" value="Y"> <span>수신</span>&nbsp;&nbsp;
+            <input type="radio" name="information" value="N"> <span>수신거부</span><br/>
+        </div>
+        <div>
+            <label>관심분야</label>
+            <input type="checkbox" name="interests" value="생두"> <span>생두</span>&nbsp;&nbsp;
+            <input type="checkbox" name="interests" value="원두"> <span>원두</span>&nbsp;&nbsp;
+            <input type="checkbox" name="interests" value="로스팅"> <span>로스팅</span>&nbsp;&nbsp;
+            <input type="checkbox" name="interests" value="핸드드립"> <span>핸드드립</span>&nbsp;&nbsp;
+            <input type="checkbox" name="interests" value="에스프레소"> <span>에스프레소</span>&nbsp;&nbsp;
+            <input type="checkbox" name="interests" value="창업"> <span>창업</span><br/>
+        </div>
+        <div>
+            <label for="">가업경로</label>
+            <select name="pwhint" id="">
+                <option value="choice">선택하세요</option>
+                <option value="internet">인터넷</option>
+                <option value="phone">휴대폰</option>
+                <option value="mail">메일</option>
+            </select>
+        </div>
+        <div>
+            <label for="">정보공개여부</label>
+            <input type="radio" name="information" value="Y"> <span>네</span>&nbsp;&nbsp;
+            <input type="radio" name="information" value="N"> <span>아니오</span><br/>
+        </div>
+        <hr style="border: 100;">
+        <div>
+            <input class="button"  type="submit" value="회원가입">
+            <input class="button" type="submit" value="취소">
+        </div>
+        
+        
+</body>
+</html>

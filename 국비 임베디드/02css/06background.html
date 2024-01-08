@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrapper{
+            width: 100vw;
+            height: 3000px;
+            background-image: url(./images/mountains-190055_1280.jpg);
+            /* 배경 사이즈 조절 
+            cover: 사용 시 배경 꽉 채워줌[픽셀 단위의 이미지인 경우 깨짐],
+            auto: 기본 이미지 크기,
+            contain: width 즉 가로만 꽉 채워줌[이미지 크기를 최대한 유지하면서 채우기]
+            */
+            background-size: 50vw 50vh;
+            /* 반복 삭제 */
+            background-repeat: no-repeat;
+            /* 이미지 배치 */
+            background-position: center;
+            /* 스크롤이 동시에 이미지를 고정 여부  fixeds*/
+            background-attachment: fixed;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bg">
+
+        </div>
+    </div>
+</body>
+</html>

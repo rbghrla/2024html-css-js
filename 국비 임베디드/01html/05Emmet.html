@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자식요소: '>' -->
+   
+    <!-- div>ul>li -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- div>p>ul>li -->
+    <div>
+        <p>
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+    </div>
+
+    <!-- 형제노드: '+' -->
+    
+    <!-- div>ul+ol -->
+    <div>
+        <ul></ul>
+        <ol></ol>
+    </div>
+
+    <!-- div>p+div+span -->
+    <div>
+        <p></p>
+        <div></div>
+        <span></span>
+    </div>
+
+    <!-- div>ul>li>a+ul -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <ul></ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 상위태그로 이동: '^' -->
+    
+    <!-- div>ul>li>a+ul>li*4 -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- div>ul>li>a+ul>li*4^^p -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <p></p>
+            <!-- p태그가 2단계 상위레벨로 올라감  -->
+        </ul>
+    </div>
+
+    <!-- div>ul>li*4>a{MENU$}+ul>li*3>a{SUBMENU$} -->
+    <div>
+        <ul>
+            <li>
+                <a href="">MENU1</a>
+                <ul>
+                    <li><a href="">SUBMENU1</a></li>
+                    <li><a href="">SUBMENU2</a></li>
+                    <li><a href="">SUBMENU3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">MENU2</a>
+                <ul>
+                    <li><a href="">SUBMENU1</a></li>
+                    <li><a href="">SUBMENU2</a></li>
+                    <li><a href="">SUBMENU3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">MENU3</a>
+                <ul>
+                    <li><a href="">SUBMENU1</a></li>
+                    <li><a href="">SUBMENU2</a></li>
+                    <li><a href="">SUBMENU3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">MENU4</a>
+                <ul>
+                    <li><a href="">SUBMENU1</a></li>
+                    <li><a href="">SUBMENU2</a></li>
+                    <li><a href="">SUBMENU3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+        class, id 부여가능 
+        id: 해당 페이지내에서 유일한 이름 부여 
+        class: 여러 테이블들을 묶어서 처리하는 그루핑 언어
+    -->
+
+    <!-- .클래스명 사용시 .wrapper  -->
+    <div class="wrapper"></div>
+
+    <div class="wrapper">
+        <ul class="menu01"><a href=""></a></ul>
+    </div>
+
+    <!-- #아이디명 사용시 #wrapper -->
+    <div id="wrapper1"></div>
+
+    <!-- #wrapper>ul#menu01 -->
+    <div id="wrapper2">
+        <ul id="menu01"></ul>
+    </div>
+
+    <!-- 속성 추가 -->
+
+    <!-- div>ol[type='I']>li*4{Text$} -->
+    <div>
+        <ol type="I">
+            <li>Text1</li>
+            <li>Text2</li>
+            <li>Text3</li>
+            <li>Text4</li>
+        </ol>
+    </div>
+
+    <!-- 데이터들을 잠시 보관 -->
+    <div>
+        <ol type="I" ,data-menu="menu01">
+            <li>Text1</li>
+            <li>Text2</li>
+            <li>Text3</li>
+            <li>Text4</li>
+        </ol>
+    </div>
+
+    <!-- .wrapper>ul>li*5{text$@8}  @붙이면 그 숫자 부터 시작 -->
+    <div class="wrapper">
+        <ul>
+            <li>text8</li>
+            <li>text9</li>
+            <li>text10</li>
+            <li>text11</li>
+            <li>text12</li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>
